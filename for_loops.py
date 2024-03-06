@@ -87,13 +87,17 @@ if run==9:
     #Write a program that checks if a given number is a prime number. A prime number is a number that is only divisible by 1 and itself. The user enters a number and the programs prints out whether the number is a prime number or not.
     print("Running problem 9:")
     num=int(input("Enter a number:"))
+    x=False
     if num>1:
         for i in range(2,num):
             if num%i==0:
-                print("it is not a prime number")
-            else:
-                print("It is a prime number")
-            break
+                x=True
+                break
+        if x==True:
+            print("it is not a prime number")
+        else:
+            print("it is a prime number")
+
     else:
         print("it is not a prime number")
 
